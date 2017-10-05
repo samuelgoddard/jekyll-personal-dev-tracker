@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    YOUR-THEME-NAME (0.1.0)
+    theme (0.1.0)
       jekyll (~> 3.6)
 
 GEM
@@ -60,10 +60,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  YOUR-THEME-NAME!
   bundler (~> 1.12)
   jekyll-livereload
   rake (~> 10.0)
+  theme!
 
 BUNDLED WITH
    1.16.0.pre.3

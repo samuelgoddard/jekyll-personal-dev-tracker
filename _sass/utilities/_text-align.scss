@@ -1,0 +1,43 @@
+//**
+// Text align utility
+//**
+
+.u-text-center {
+    text-align: center;
+}
+
+.u-text-left {
+    text-align: left;
+}
+
+.u-text-right {
+    text-align: right;
+}
+
+@include tablet {
+    .u-text-center--m {
+        text-align: center;
+    }
+
+    .u-text-left--m {
+        text-align: left;
+    }
+
+    .u-text-right--m {
+        text-align: right;
+    }
+}
+
+@include desktop {
+    .u-text-center--l {
+        text-align: center;
+    }
+
+    .u-text-left--l {
+        text-align: left;
+    }
+
+    .u-text-right--l {
+        text-align: right;
+    }
+}
