@@ -5,9 +5,9 @@
 // Global Heading Resets
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: inherit;
+  font-family: "Gilroy-Bold";
   line-height: 1.5rem;
-  color: inherit;
+  color: $project-black;
   margin-top: 0.333rem;
   margin-bottom: 0.85rem;
   font-weight: 700;
@@ -40,13 +40,18 @@ p, blockquote {
 // Anchors
 
 a {
-  color: $primary-color;
+  color: $text-color-dark;
   text-decoration: underline;
   text-decoration-skip: ink;
   hyphens: none;
 
+  &:visited {
+    color: lighten($text-color, 5%);
+    cursor: pointer;
+  }
+
   &:hover {
-    color: lighten($primary-color, 5%);
+    color: darken($text-color, 5%);
     cursor: pointer;
   }
 }

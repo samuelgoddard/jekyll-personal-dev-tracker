@@ -2,6 +2,20 @@
 // Global Settings
 //**
 
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/34ce95");
+
+@font-face {font-family: 'Gilroy-SemiBold';src: url('webfonts/34CE95_4_0.eot');src: url('webfonts/34CE95_4_0.eot?#iefix') format('embedded-opentype'),url('webfonts/34CE95_4_0.woff2') format('woff2'),url('webfonts/34CE95_4_0.woff') format('woff'),url('webfonts/34CE95_4_0.ttf') format('truetype');}
+@font-face {font-family: 'Gilroy-Regular';src: url('webfonts/34CE95_6_0.eot');src: url('webfonts/34CE95_6_0.eot?#iefix') format('embedded-opentype'),url('webfonts/34CE95_6_0.woff2') format('woff2'),url('webfonts/34CE95_6_0.woff') format('woff'),url('webfonts/34CE95_6_0.ttf') format('truetype');}
+@font-face {font-family: 'Gilroy-Medium';src: url('webfonts/34CE95_9_0.eot');src: url('webfonts/34CE95_9_0.eot?#iefix') format('embedded-opentype'),url('webfonts/34CE95_9_0.woff2') format('woff2'),url('webfonts/34CE95_9_0.woff') format('woff'),url('webfonts/34CE95_9_0.ttf') format('truetype');}
+@font-face {font-family: 'Gilroy-Light';src: url('webfonts/34CE95_B_0.eot');src: url('webfonts/34CE95_B_0.eot?#iefix') format('embedded-opentype'),url('webfonts/34CE95_B_0.woff2') format('woff2'),url('webfonts/34CE95_B_0.woff') format('woff'),url('webfonts/34CE95_B_0.ttf') format('truetype');}
+@font-face {font-family: 'Gilroy-Heavy';src: url('webfonts/34CE95_D_0.eot');src: url('webfonts/34CE95_D_0.eot?#iefix') format('embedded-opentype'),url('webfonts/34CE95_D_0.woff2') format('woff2'),url('webfonts/34CE95_D_0.woff') format('woff'),url('webfonts/34CE95_D_0.ttf') format('truetype');}
+@font-face {font-family: 'Gilroy-ExtraBold';src: url('webfonts/34CE95_F_0.eot');src: url('webfonts/34CE95_F_0.eot?#iefix') format('embedded-opentype'),url('webfonts/34CE95_F_0.woff2') format('woff2'),url('webfonts/34CE95_F_0.woff') format('woff'),url('webfonts/34CE95_F_0.ttf') format('truetype');}
+@font-face {font-family: 'Gilroy-Bold';src: url('webfonts/34CE95_11_0.eot');src: url('webfonts/34CE95_11_0.eot?#iefix') format('embedded-opentype'),url('webfonts/34CE95_11_0.woff2') format('woff2'),url('webfonts/34CE95_11_0.woff') format('woff'),url('webfonts/34CE95_11_0.ttf') format('truetype');}
+@font-face {font-family: 'Gilroy-Black';src: url('webfonts/34CE95_13_0.eot');src: url('webfonts/34CE95_13_0.eot?#iefix') format('embedded-opentype'),url('webfonts/34CE95_13_0.woff2') format('woff2'),url('webfonts/34CE95_13_0.woff') format('woff'),url('webfonts/34CE95_13_0.ttf') format('truetype');}
+
+
 // Global Font Imports
 @import url(https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700);
 @import url('https://fonts.googleapis.com/css?family=Abel');
@@ -16,9 +30,10 @@ $large-desktop-break: 73.13rem;
 // Global Color Variables (need to add / remove values to map _maps.scss)
 $primary-color: #d33c2c;
 $project-grey: #eee;
-$project-black: #000;
+$project-black: #2C363F;
 $project-white: #fff;
-$text-color: #000;
+$text-color: #4d5c70;
+$text-color-dark: #314259;
 
 // Global Sizing Variables (need to add / remove values to map _maps.scss)
 $f-xxl: 2.625rem;
@@ -32,7 +47,7 @@ $f-xxs: 0.75rem;
 
 // Global Font Variables
 $helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-family: 'Abel', serif;
+$base-font-family: 'Gilroy-Regular', serif;
 
 $base-font-size: 16px;
 $base-font-weight: regular;

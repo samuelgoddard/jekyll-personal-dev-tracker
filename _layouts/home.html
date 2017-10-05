@@ -6,6 +6,13 @@ layout: default
 
     {{ content }}
 
+    <p style="width: 45%;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. <a href="#">Excepteur sint occaecat</a> cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
     <h1 class="page-heading">Posts</h1>
     <ul class="post-list">
         {% for post in site.posts %}
@@ -26,7 +33,7 @@ layout: default
             <span class="post-meta">{{ gist.date | date: date_format }}</span>
 
             {% for tag in gist.tags %}
-                <span class="tag post-meta" style="background: #ED9240; border-radius: 2px; padding: 2px 5px; color: white;">{{ tag }}</span>
+                <small class="tag post-meta" style="background: #ED9240; border-radius: 2px; padding: 2px 5px; color: white;">{{ tag }}</small>
             {% endfor %}
 
             <h2><a class="post-link" href="{{ gist.url | relative_url }}">{{ gist.title }}</a></h2>
