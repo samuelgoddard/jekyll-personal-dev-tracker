@@ -5,17 +5,14 @@
 // Global Heading Resets
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Gilroy-Bold";
-  line-height: 1.5rem;
+  font-family: $base-font-family;
+  line-height: 1;
   color: $project-black;
-  margin-top: 0.333rem;
-  margin-bottom: 0.85rem;
   font-weight: 700;
 }
 
 h1 {
-  font-size: $f-xl;
-  margin-bottom: 1.3rem;
+  font-size: $f-xxl;
 }
 
 h2 {
@@ -33,8 +30,12 @@ h4 {
 // Paragraphs
 
 p, blockquote {
-  font-size: $f-base;
-  margin: 0 0 0.85rem 0;
+  line-height: $base-line-height;
+  font-size: $base-font-size;
+
+  &:not(:last-child) {
+    margin-bottom: $base-font-size;
+  }
 }
 
 // Anchors

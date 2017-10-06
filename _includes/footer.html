@@ -4,25 +4,17 @@
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          {% if site.email %}
-          <li>{{ site.title | escape }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-          {% endif %}
-        </ul>
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            <a href="https://www.github.com/{{ site.github_username }}">github</a>
-          </li>
-          {% endif %}
+        {% if site.email %}
+        <p>{{ site.title | escape }}</p>
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        {% endif %}
+        {% if site.github_username %}
+          <a href="https://www.github.com/{{ site.github_username }}">github</a>
+        {% endif %}
 
-          {% if site.twitter_username %}
-          <li>
-            <a href="https://www.twitter.com/{{ site.twitter_username }}">twitter</a>
-          </li>
-          {% endif %}
-        </ul>
+        {% if site.twitter_username %}
+          <a href="https://www.twitter.com/{{ site.twitter_username }}">twitter</a>
+        {% endif %}
       </div>
     </div>
 

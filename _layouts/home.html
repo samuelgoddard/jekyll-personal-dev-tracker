@@ -6,26 +6,21 @@ layout: default
 
     {{ content }}
 
-    <p style="width: 45%;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. <a href="#">Excepteur sint occaecat</a> cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-    <h1 class="page-heading">Posts</h1>
+    <h2 class="page-heading">Posts</h2>
+    <p>A list of recent posts i've been working on</p>
     <ul class="post-list">
         {% for post in site.posts %}
             <li>
                 {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
                 <span class="post-meta">{{ post.date | date: date_format }}</span>
 
-                <h2><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+                <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
             </li>
         {% endfor %}
     </ul>
 
-    <h1 class="page-heading">Gists</h1>
+    <h2 class="page-heading">Gists</h2>
+    <p>A list of gists i find helpful for my daily workflow</p>
     <ul class="post-list">
         {% for gist in site.gists %}
         <li>
@@ -36,7 +31,7 @@ layout: default
                 <small class="tag post-meta" style="background: #ED9240; border-radius: 2px; padding: 2px 5px; color: white;">{{ tag }}</small>
             {% endfor %}
 
-            <h2><a class="post-link" href="{{ gist.url | relative_url }}">{{ gist.title }}</a></h2>
+            <a class="post-link" href="{{ gist.url | relative_url }}">{{ gist.title }}</a>
         </li>
         {% endfor %}
     </ul>

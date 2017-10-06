@@ -1,5 +1,5 @@
 .wrapper {
-  max-width: 1200px;
+  max-width: 100rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
@@ -35,7 +35,7 @@
   .col-12 { width: 100%; }
 }
 
-@include desktop {
+@include tablet {
   .col-1--l  { width: 7.05%; }
   .col-2--l  { width: 15.5%; }
   .col-3--l  { width: 23.95%; }
@@ -48,4 +48,12 @@
   .col-10--l { width: 83.1%; }
   .col-11--l { width: 91.55%; }
   .col-12--l { width: 100%; }
+}
+
+.col--flex-end {
+  justify-content: flex-end;
+}
+
+.g--align-center {
+  align-items: center;
 }
