@@ -1,0 +1,89 @@
+---
+layout: post
+type: learning
+title:  "Learning: CSS Grid"
+parent: "CSS Grid"
+current: "The Basics"
+date:   2017-6-12 10:00:00 +010
+author: "Sam Goddard"
+categories: jekyll update
+goal: Learning more about the basics and fundamentals of CSS grid
+timeSpent: two and a half days
+---
+
+<p class="f--m">
+  After messing around on <a href="http://cssgridgarden.com/">cssgridgarden</a> for a couple of hours, I decided to take a more in depth look at CSS grid and put down some notes to reflect on.
+</p>
+
+CSS Grid has been around a while now, but only recently has it become *ready* for production level sites. MDN recently puplished a document about [CSS Grid Layout and Progressive Enhancement](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement) that reflects on this further. With this in mind, now seems like a great time to start getting to grips with CSS Grid.
+
+---
+
+### Resources I used throughout:
+
+[CSS Grid Garden](http://cssgridgarden.com/)<br/>
+
+---
+
+## The Basics
+
+### Grid Container
+
+Create a grid container by setting the `display` property with a value of `grid` or `inline-grid`. All direct children of grid containers become grid items.
+
+~~~scss
+display: grid;
+~~~
+
+<div class="code-example">
+  <div class="code-example__css-grid" style="display: grid; margin-top: 2rem; text-align: center;">
+    <div class="code-example__item" style="border: 1px solid #fff; background: #d33c2c; color: white; border-radius: 3px;display: flex; align-items: center; justify-content: center; padding: 0.5rem;">1</div>
+    <div class="code-example__item" style="border: 1px solid #fff; background: #d33c2c; color: white; border-radius: 3px;display: flex; align-items: center; justify-content: center; padding: 0.5rem;">2</div>
+    <div class="code-example__item" style="border: 1px solid #fff; background: #d33c2c; color: white; border-radius: 3px;display: flex; align-items: center; justify-content: center; padding: 0.5rem;">3</div>
+    <div class="code-example__item" style="border: 1px solid #fff; background: #d33c2c; color: white; border-radius: 3px;display: flex; align-items: center; justify-content: center; padding: 0.5rem;">4</div>
+  </div>
+</div>
+
+Grid items are placed in rows by default and span the full width of the grid container.
+
+---
+
+### Explicit Grid
+Explicitly set a grid by creating columns and rows with the `grid-template-columns` and `grid-template-rows properties`.
+
+~~~scss
+grid-template-rows: 50px 100px;
+~~~
+
+<div class="code-example">
+  <div class="code-example__css-grid" style="display: grid; grid-template-rows: 50px 100px; margin-top: 2rem; text-align: center;">
+    <div class="code-example__item" style="border: 1px solid #fff; background: #d33c2c; color: white; border-radius: 3px;display: flex; align-items: center; justify-content: center; padding: 0.5rem;">1</div>
+    <div class="code-example__item" style="border: 1px solid #fff; background: #d33c2c; color: white; border-radius: 3px;display: flex; align-items: center; justify-content: center; padding: 0.5rem;">2</div>
+    <div class="code-example__item" style="border: 1px solid #fff; background: #d33c2c; color: white; border-radius: 3px;display: flex; align-items: center; justify-content: center; padding: 0.5rem;">3</div>
+    <div class="code-example__item" style="border: 1px solid #fff; background: #d33c2c; color: white; border-radius: 3px;display: flex; align-items: center; justify-content: center; padding: 0.5rem;">4</div>
+  </div>
+</div>
+
+A row track is created for each value specified for `grid-template-rows`. Track size values can be any non-negative, length value `(px, %, em, etc.)`
+
+Items 1 and 2 have fixed heights of `50px` and `100px`.
+
+Because only 2 row tracks were defined, heights of items 3 and 4 are defined by the contents of each.
+
+
+~~~scss
+grid-template-columns: 25% 25% 25% 25%;
+~~~
+
+<div class="code-example">
+  <div class="code-example__css-grid" style="display: grid; grid-template-columns: 25% 25% 25% 25%; margin-top: 2rem; text-align: center;">
+    <div class="code-example__item" style="border: 1px solid #fff; background: #d33c2c; color: white; border-radius: 3px;display: flex; align-items: center; justify-content: center; padding: 0.5rem;">1</div>
+    <div class="code-example__item" style="border: 1px solid #fff; background: #d33c2c; color: white; border-radius: 3px;display: flex; align-items: center; justify-content: center; padding: 0.5rem;">2</div>
+    <div class="code-example__item" style="border: 1px solid #fff; background: #d33c2c; color: white; border-radius: 3px;display: flex; align-items: center; justify-content: center; padding: 0.5rem;">3</div>
+    <div class="code-example__item" style="border: 1px solid #fff; background: #d33c2c; color: white; border-radius: 3px;display: flex; align-items: center; justify-content: center; padding: 0.5rem;">4</div>
+  </div>
+</div>
+
+Like rows, a column track is created for each value specified for `grid-template-columns`.
+
+

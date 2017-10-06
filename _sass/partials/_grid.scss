@@ -1,5 +1,5 @@
 .wrapper {
-  max-width: 100rem;
+  max-width: 110rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
@@ -7,8 +7,24 @@
 }
 
 .g {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
 }
+
+.col-1  { width: 7.05%; }
+.col-2  { width: 15.5%; }
+.col-3  { width: 23.95%; }
+.col-4  { width: 32.4%; }
+.col-5  { width: 40.85%; }
+.col-6  { width: 49.3%; }
+.col-7  { width: 57.75%; }
+.col-8  { width: 66.2%; }
+.col-9  { width: 74.65%; }
+.col-10 { width: 83.1%; }
+.col-11 { width: 91.55%; }
+.col-12 { width: 100%; }
+.col-full { width: 100%; }
 
 @include tablet {
   .g {
@@ -21,18 +37,18 @@
     flex: 1;
   }
 
-  .col-1  { width: 7.05%; }
-  .col-2  { width: 15.5%; }
-  .col-3  { width: 23.95%; }
-  .col-4  { width: 32.4%; }
-  .col-5  { width: 40.85%; }
-  .col-6  { width: 49.3%; }
-  .col-7  { width: 57.75%; }
-  .col-8  { width: 66.2%; }
-  .col-9  { width: 74.65%; }
-  .col-10 { width: 83.1%; }
-  .col-11 { width: 91.55%; }
-  .col-12 { width: 100%; }
+  .col-1--m  { width: 7.05%; }
+  .col-2--m  { width: 15.5%; }
+  .col-3--m  { width: 23.95%; }
+  .col-4--m  { width: 32.4%; }
+  .col-5--m  { width: 40.85%; }
+  .col-6--m  { width: 49.3%; }
+  .col-7--m  { width: 57.75%; }
+  .col-8--m  { width: 66.2%; }
+  .col-9--m  { width: 74.65%; }
+  .col-10--m { width: 83.1%; }
+  .col-11--m { width: 91.55%; }
+  .col-12--m { width: 100%; }
 }
 
 @include tablet {
@@ -56,4 +72,52 @@
 
 .g--align-center {
   align-items: center;
+}
+
+.col-order--first {
+  order: 1;
+}
+
+@include tablet {
+  .col-order--first--m {
+    order: 1!important;;
+  }
+}
+
+@include desktop {
+  .col-order--first--l {
+    order: 1 !important;;
+  }
+}
+
+.col-order--second {
+  order: 2;
+}
+
+@include tablet {
+  .col-order--second--m {
+    order: 2 !important;
+  }
+}
+
+@include desktop {
+  .col-order--second--l {
+    order: 2 !important;
+  }
+}
+
+.col-order--third {
+  order: 3;
+}
+
+@include tablet {
+  .col-order--third--m {
+    order: 3 !important;;
+  }
+}
+
+@include desktop {
+  .col-order--third--l {
+    order: 3 !important;;
+  }
 }

@@ -1,22 +1,61 @@
 ---
 layout: default
 ---
+
+{% assign date_format = site.minima.date_format | default: "%-d %B %Y" %}
+
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h2 itemprop="name headline">{{ page.title | escape }}</h2>
-    <p class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        {{ page.date | date: date_format }}
-      </time>
-      {% if page.author %}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
-      {% endif %}</p>
+    <h1 style="margin-bottom: 10px;" itemprop="name headline">{{ page.title | escape }}</h1>
+    {% if page.date %}
+      <small style="font-family: Consolas, Courier, sans-serif; color: #aaa;">Last updated: 6 October 2017</small>
+    {% endif %}
   </header>
 
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+  <div class="g">
+    <div class="col-full col-7--m col-order--second col-order--first--m">
+      <div class="post-content" itemprop="articleBody">
+          <div>
+            {{ content }}
+          </div>
+        </div>
+      </div>
+    <div class="col-full col-4--m col-order--first col-order--second--m" style="margin-top: 2rem;">
+      <div style="background: white; box-shadow: 0 2px 4px 0 rgba(0,0,0,.1); padding: 2rem; border-radius: 3px; font-family: Consolas, Courier, sans-serif;">
+        {% if page.type == 'learning' %}
+          {% if page.goal %}
+            <small><strong>Goal:</strong><br/>{{ page.goal }}</small><br/><br/>
+            {% endif %}
+            {% if page.date %}
+            <small><strong>Date started:</strong><br/>{{ page.date | date: date_format }}</small><br/><br/>
+            {% endif %}
+            {% if page.timeSpent %}
+            <small><strong>Time spent:</strong><br/>{{ page.timeSpent }}</small>
+          {% endif %}
 
+          <ul class="list--naked">
+            <small><strong>Series:</strong></small>
+            <li><a href="#"><small>1 - The Basics:</small></a></li>
+            <li><a href="#"><small>2 - Repeating Grid Tracks:</small></a></li>
+            <li><a href="#"><small>3 - Gutters:</small></a></li>
+            <li><a href="#"><small>4 - Spanning Items</small></a></li>
+            <li><a href="#"><small>5 - Naming Grid Lines</small></a></li>
+            <li><a href="#"><small>6 - Advanced Shit</small></a></li>
+          </ul>
+
+          <ul class="list--naked">
+            <small><strong>Repo:</strong></small>
+            <li><a href="#"><small>github.com/samuelgoddard/css-grid:</small></a></li>
+          </ul>
+
+          {% else %}
+            <small><strong>Date created:</strong><br/>{{ page.date | date: date_format }}</small><br/><br/>
+
+            <small><strong>Article by:</strong><br/>{{ page.author }}</small>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
 </article>
