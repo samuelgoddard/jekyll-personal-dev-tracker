@@ -1,7 +1,7 @@
 ---
 layout: post
 type: writing
-title:  "Why you should be considering Craft over WordPress"
+title:  "Why you should be considering Craft over WordPress as your next Content Management System"
 date:   2017-08-13 12:19:14 +010
 author: "Sam Goddard"
 categories: jekyll update

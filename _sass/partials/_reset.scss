@@ -5,11 +5,11 @@ footer, header, hgroup, menu, nav, section {
 
 ::selection {
   background: $primary-color; /* WebKit/Blink Browsers */
-  color: #F6F9FC;
+  color: #fff;
 }
 ::-moz-selection {
   background: $primary-color; /* Gecko Browsers */
-  color: #F6F9FC;
+  color: #fff;
 }
 
 /**
@@ -26,7 +26,6 @@ body {
   line-height: $base-line-height;
   color: $text-color;
   hyphens: auto;
-  background-color: white;
   margin: 0;
   padding: 0;
 }
@@ -40,7 +39,7 @@ img {
 }
 
 hr {
-  border-bottom: 1px solid darken(#F6F9FC, 5%);
+  border-bottom: 1px solid darken(#fff, 5%);
   border-top: none;
   border-left: none;
   border-right: none;
@@ -123,7 +122,7 @@ blockquote {
 pre,
 code {
   border-radius: 3px;
-  background-color: #fff;
+  background-color: #FAFAFA;
   font-family: Consolas, Courier, sans-serif;
   padding: 0.5rem 0.75rem;
   color: $primary-color;
@@ -151,3 +150,32 @@ pre {
     padding-left: 0;
   }
 }
+
+.site-inner {
+  margin: 15px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  border-color: #fff;
+  min-height: calc(100vh - 30px);
+  box-shadow: 0 0 20px 8px rgba(0,0,0,0.05);
+  background: white;
+
+  @include tablet {
+    min-height: calc(100vh - 175px);
+    padding-bottom: 70px;
+    padding-top: 35px;
+    margin: 35px;
+    box-shadow: 0 0 20px 8px rgba(0,0,0,0.05);
+  }
+}
+
+.m-site-header {
+  @include tablet {
+    padding-top: 15px;
+  }
+}
+
+.post-header {
+  padding-bottom: 20px;
+}
+

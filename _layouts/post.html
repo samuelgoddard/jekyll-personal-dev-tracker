@@ -9,50 +9,48 @@ layout: default
   <header class="post-header">
     <h1 style="margin-bottom: 10px;" itemprop="name headline">{{ page.title | escape }}</h1>
     {% if page.date %}
-      <small style="font-family: Consolas, Courier, sans-serif; color: #aaa;">Last updated: 6 October 2017</small>
+      <span style="font-family: Consolas, Courier, sans-serif; color: #aaa;">Last Updated: 6 October 2017</span>
     {% endif %}
   </header>
 
   <div class="g">
-    <div class="col-full col-7--m col-order--second col-order--first--m">
+    <div class="col-full col-9--m col-order--second col-order--first--m u-unstyled-links">
       <div class="post-content" itemprop="articleBody">
           <div>
             {{ content }}
           </div>
         </div>
       </div>
-    <div class="col-full col-4--m col-order--first col-order--second--m" style="margin-top: 2rem;">
-      <div style="background: white; box-shadow: 0 2px 4px 0 rgba(0,0,0,.1); padding: 2rem; border-radius: 3px; font-family: Consolas, Courier, sans-serif;">
+    <div class="col-full col-3--m col-order--first col-order--second--m" style="margin-top: 2rem;"">
+      <div style="font-family: Consolas, Courier, sans-serif;" class="u-text-right--m">
         {% if page.type == 'learning' %}
           {% if page.goal %}
-            <small><strong>Goal:</strong><br/>{{ page.goal }}</small><br/><br/>
+           <strong>Goal:</strong><br/>{{ page.goal }}<br/><br/>
             {% endif %}
             {% if page.date %}
-            <small><strong>Date started:</strong><br/>{{ page.date | date: date_format }}</small><br/><br/>
+           <strong>Date started:</strong><br/>{{ page.date | date: date_format }}<br/><br/>
             {% endif %}
             {% if page.timeSpent %}
-            <small><strong>Time spent:</strong><br/>{{ page.timeSpent }}</small>
+           <strong>Time spent:</strong><br/>{{ page.timeSpent }}
           {% endif %}
 
           <ul class="list--naked">
-            <small><strong>Series:</strong></small>
-            <li><a href="#"><small>1 - The Basics:</small></a></li>
-            <li><a href="#"><small>2 - Repeating Grid Tracks:</small></a></li>
-            <li><a href="#"><small>3 - Gutters:</small></a></li>
-            <li><a href="#"><small>4 - Spanning Items</small></a></li>
-            <li><a href="#"><small>5 - Naming Grid Lines</small></a></li>
-            <li><a href="#"><small>6 - Advanced Shit</small></a></li>
+            <strong>Series:</strong>
+            <li><a href="#">1 - The Basics</a></li>
+            <li><a href="#">2 - Repeating Grid Tracks</a></li>
+            <li><a href="#">3 - Gutters</a></li>
+            <li><a href="#">4 - Spanning Items</a></li>
+            <li><a href="#">5 - Naming Grid Lines</a></li>
+            <li><a href="#">6 - Advanced Shit</a></li>
           </ul>
 
-          <ul class="list--naked">
-            <small><strong>Repo:</strong></small>
-            <li><a href="#"><small>github.com/samuelgoddard/css-grid:</small></a></li>
-          </ul>
+          <strong>Repo:</strong><br/>
+          <a href="#">samuelgoddard/css-grid</a>
 
           {% else %}
-            <small><strong>Date created:</strong><br/>{{ page.date | date: date_format }}</small><br/><br/>
+            <strong>Date created:</strong><br/>{{ page.date | date: date_format }}<br/><br/>
 
-            <small><strong>Article by:</strong><br/>{{ page.author }}</small>
+            <strong>Article by:</strong><br/>{{ page.author }}
           {% endif %}
         </div>
       </div>

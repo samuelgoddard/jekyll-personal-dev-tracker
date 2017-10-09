@@ -1,8 +1,8 @@
-<header class="site-header" role="banner">
+<header class="m-site-header" role="banner">
     <div class="wrapper">
         <div class="g g--align-center">
             {% assign default_paths = site.pages | map: "path" %} {% assign page_paths = site.header_pages | default: default_paths %}
-            <h2><a class="site-title" href="{{ "/" | relative_url }}">sg.</a></h2>
+            <h1><a class="site-title" href="{{ "/" | relative_url }}">sg.</a></h1>
 
             <div class="col-flex justify-content: flex-end;">
                 {% if page_paths %}

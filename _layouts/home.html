@@ -6,7 +6,22 @@ layout: default
 
     {{ content }}
 
-    <h2 class="page-heading">Posts</h2>
+<!--     <div class="g">
+      <div class="col-6">
+        <h2>Welcome!</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation.</p>
+      </div>
+    </div> -->
+
+    <h2 class="page-heading">Latest Posts</h2>
     <p>A list of recent posts i've been working on</p>
     <ul class="list--naked">
         {% for post in site.posts %}
@@ -20,7 +35,7 @@ layout: default
         <a href="#"><small>View all posts</small></a>
     </ul>
 
-    <h2 class="page-heading">Gists</h2>
+    <h2 class="page-heading">Latest Gists</h2>
     <p>A list of gists i find helpful for my daily workflow</p>
     <ul class="list--naked list--extra-pad">
         {% for gist in site.gists %}
